@@ -1,21 +1,30 @@
 #include "stm32l031xx.h"
+#include <stdio.h>
 #include "gpio.h"
+#include "uart.h"
+
+
+char key;
 
 int main()
 {
     GPIO_Init();
+    UartInit();
+
+    printf("Hello from STM32L0......\n\r");
 
     while(1)
     {
-        //reading the button
-        if(GPIOB->IDR & GPIO_IDR_ID7)
+        key = UartRead();
+        if(key == '1')
         {
-            GPIOB->ODR |= (GPIO_ODR_OD3);
+            GPIOA->BSRR |= GPIO_BSRR_BS_8;
         }
         else
         {
-            GPIOB->ODR &= ~(GPIO_ODR_OD3);
+            GPIOA->BSRR |= GPIO_BSRR_BR_8;
         }
 
+        //UartWrite('Y');
     }
 }
