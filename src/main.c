@@ -2,29 +2,25 @@
 #include <stdio.h>
 #include "gpio.h"
 #include "uart.h"
+#include "adc.h"
 
 
-char key;
+uint32_t sensorValue;
 
 int main()
 {
     GPIO_Init();
     UartInit();
+    AdcInit();
+    AdcActivate();
+    AdcStartConversion();
 
     printf("Hello from STM32L0......\n\r");
 
     while(1)
     {
-        key = UartRead();
-        if(key == '1')
-        {
-            GPIOA->BSRR |= GPIO_BSRR_BS_8;
-        }
-        else
-        {
-            GPIOA->BSRR |= GPIO_BSRR_BR_8;
-        }
+        sensorValue = AdcRead();
+        printf("%ld\n\r", sensorValue);
 
-        //UartWrite('Y');
     }
 }
