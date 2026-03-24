@@ -21,6 +21,5 @@ int main()
     {
         sensorValue = AdcRead();
         printf("%ld\n\r", sensorValue);
-
     }
 }

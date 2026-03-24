@@ -20,7 +20,10 @@ void AdcInit(void)
     ADC1->SMPR |= (7U << ADC_SMPR_SMP_Pos);
 
     /* set continuous conversion mode */
-    ADC1->CFGR1 |= ADC_CFGR1_CONT;
+   // ADC1->CFGR1 |= ADC_CFGR1_CONT;
+
+    /* set single conversion mode */
+    ADC1->CFGR1 &= ~(ADC_CFGR1_CONT);
 
     /* set sequential channel */
     ADC1->CHSELR |= ADC_CHSELR_CHSEL4;
