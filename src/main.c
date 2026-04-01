@@ -3,6 +3,7 @@
 #include "gpio.h"
 #include "uart.h"
 #include "adc.h"
+#include "systick.h"
 
 
 uint32_t sensorValue;
@@ -19,7 +20,8 @@ int main()
 
     while(1)
     {
-        sensorValue = AdcRead();
-        printf("%ld\n\r", sensorValue);
+        Systick_delay_ms(1000);
+        printf("A second just passed!\r\n");
+
     }
 }
