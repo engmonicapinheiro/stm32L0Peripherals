@@ -4,9 +4,8 @@
 #include "uart.h"
 #include "adc.h"
 #include "systick.h"
+#include "timer.h"
 
-
-uint32_t sensorValue;
 
 int main()
 {
@@ -15,13 +14,14 @@ int main()
     AdcInit();
     AdcActivate();
     AdcStartConversion();
+    Timer1HzInit();
 
     printf("Hello from STM32L0......\n\r");
 
     while(1)
     {
-        Systick_delay_ms(1000);
+        TimerDelayOneSecond();
         printf("A second just passed!\r\n");
-
+        ToggleGreenLed();
     }
 }

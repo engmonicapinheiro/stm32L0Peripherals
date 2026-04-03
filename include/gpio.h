@@ -2,7 +2,7 @@
 #define __GPIO_H
 
 void GPIO_Init(void);
-void Toggle_GreenLed(void);
-
+void ToggleGreenLedPseudoDelay(void);
+void ToggleGreenLed(void);
 
 #endif //__GPIO_H

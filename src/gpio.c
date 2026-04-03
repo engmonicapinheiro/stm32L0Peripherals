@@ -22,10 +22,15 @@ void GPIO_Init(void)
     GPIOB->MODER &= ~(GPIO_MODER_MODE7_1);
 }
 
-void Toggle_GreenLed(void)
+void ToggleGreenLedPseudoDelay(void)
 {
     GPIOA->BSRR |= GPIO_BSRR_BS_8;
     for(int i = 0; i < 1000; ++i);
     GPIOA->BSRR |= GPIO_BSRR_BR_8;
     for(int i = 0; i < 10000; ++i);
+}
+
+void ToggleGreenLed(void)
+{
+    GPIOA->ODR ^= GPIO_ODR_OD8;
 }
