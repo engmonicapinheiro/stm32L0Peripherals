@@ -5,7 +5,7 @@
 #include "adc.h"
 #include "systick.h"
 #include "timer.h"
-
+#include "exti.h"
 
 int main()
 {
@@ -15,13 +15,12 @@ int main()
     AdcActivate();
     AdcStartConversion();
     Timer1HzInit();
+    ExtiInit();
 
     printf("Hello from STM32L0......\n\r");
 
     while(1)
     {
-        TimerDelayOneSecond();
-        printf("A second just passed!\r\n");
-        ToggleGreenLed();
+
     }
 }
