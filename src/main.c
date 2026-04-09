@@ -15,7 +15,12 @@ int main()
     AdcActivate();
     AdcStartConversion();
     Timer1HzInit();
+
+    /* interrupt-based pressing of a button */
     ExtiInit();
+
+    /* interrupt-based systick heartbeat */
+    Systick1HzInterrupt();
 
     printf("Hello from STM32L0......\n\r");
 

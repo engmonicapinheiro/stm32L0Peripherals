@@ -1,5 +1,6 @@
 #include "exti.h"
-
+#include "gpio.h"
+#include "stdio.h"
 
 //Button: D4 -> PB7
 void ExtiInit(void)
