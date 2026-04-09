@@ -5,5 +5,6 @@
 
 void Timer1HzInit(void);
 void TimerDelayOneSecond();
+void Timer1HzInterruptInit(void);
 
 #endif  //TIMER_H
