@@ -18,16 +18,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15978c1-0a0c-42cc-a9e4-b94c3813b2bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/include/adxl345.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/i2c.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/spi.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/adxl345.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i2c.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/gpio.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/gpio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/adc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/gpio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +175,7 @@
       <workItem from="1777213565134" duration="717000" />
       <workItem from="1777230002311" duration="12000" />
       <workItem from="1780587768737" duration="370000" />
-      <workItem from="1780758163647" duration="657000" />
+      <workItem from="1780758163647" duration="4643000" />
     </task>
     <servers />
   </component>

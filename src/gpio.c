@@ -35,7 +35,8 @@ void ToggleGreenLed(void)
     GPIOA->ODR ^= GPIO_ODR_OD8;
 }
 
-uint8_t GetButtonState(void)
+bool GetButtonState(void)
 {
     return (GPIOB->IDR & GPIO_IDR_ID7);
+
 }

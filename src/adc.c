@@ -5,8 +5,8 @@
 void AdcInit(void)
 {
     /**** configure GPIO pin for ADC ****/
-    /* enable clocl access to GPIOA */
-      RCC->IOPENR |= RCC_IOPENR_IOPAEN;
+    /* enable clock access to GPIOA */
+    RCC->IOPENR |= RCC_IOPENR_IOPAEN;
 
     /* set PA4 mode to analog mode */
     GPIOA->MODER |= GPIO_MODER_MODE4_0;
@@ -20,10 +20,10 @@ void AdcInit(void)
     ADC1->SMPR |= (7U << ADC_SMPR_SMP_Pos);
 
     /* set continuous conversion mode */
-   // ADC1->CFGR1 |= ADC_CFGR1_CONT;
+    ADC1->CFGR1 |= ADC_CFGR1_CONT;
 
     /* set single conversion mode */
-    ADC1->CFGR1 &= ~(ADC_CFGR1_CONT);
+    //ADC1->CFGR1 &= ~(ADC_CFGR1_CONT);
 
     /* set sequential channel */
     ADC1->CHSELR |= ADC_CHSELR_CHSEL4;
@@ -53,7 +53,7 @@ void AdcStartConversion(void)
 uint32_t AdcRead(void)
 {
     /* wait for conversion completion */
-    while(!(ADC1->ISR & ADC_ISR_EOC));
+    while(!(ADC1->ISR & ADC_ISR_EOC)) {}
 
     /* read result */
     return (ADC1->DR);
