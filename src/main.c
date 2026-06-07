@@ -12,13 +12,14 @@
 
 
 bool buttonState;
-uint32_t sensorValue;
+double chipTemperature;
 
 int main()
 {
     GPIO_Init();
     UartInit();
     AdcInit();
+    TemperatureSensorInit();
     AdcActivate();
     AdcStartConversion();
 
@@ -26,9 +27,8 @@ int main()
 
     while(1)
     {
-        buttonState = GetButtonState();
-        sensorValue = AdcRead();
-        printf("%d\r\n", sensorValue);
+        chipTemperature = ReadChipTemperature();
+        printf("%g\r\n", chipTemperature);
         Systick_delay_ms(500);
 
     }

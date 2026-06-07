@@ -19,9 +19,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e15978c1-0a0c-42cc-a9e4-b94c3813b2bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/gpio.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/gpio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/adc.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/adc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/adc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/gpio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +175,7 @@
       <workItem from="1777213565134" duration="717000" />
       <workItem from="1777230002311" duration="12000" />
       <workItem from="1780587768737" duration="370000" />
-      <workItem from="1780758163647" duration="4643000" />
+      <workItem from="1780758163647" duration="16265000" />
     </task>
     <servers />
   </component>

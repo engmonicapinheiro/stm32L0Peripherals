@@ -7,5 +7,7 @@ void AdcInit(void);
 void AdcActivate(void);
 void AdcStartConversion(void);
 uint32_t AdcRead(void);
+void TemperatureSensorInit(void);
+double ReadChipTemperature(void);
 
 #endif   //ADC_H
